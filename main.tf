@@ -19,3 +19,15 @@ module "route53" {
 }
 
 
+module "ansible" {
+
+  depends_on = [
+    module.route53
+  ]
+
+  source = "./ansible"
+
+  component_name = var.component_name
+  private_ip     = module.ec2.ec2.private_ip
+}
+
