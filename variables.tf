@@ -7,3 +7,11 @@ variable "instance_type" {
 }
 
 
+variable "zone_id" {
+  default = "Z057881017RC0RRKVUX8E"
+}
+
+variable "component_name" {
+  default = "test"
+}
+
